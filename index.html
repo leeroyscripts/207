@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Apache 207 — Show 100</title>
+<script src="./image-slot.js"></script>
+<style>body{margin:0;background:#111;color:#fff;font-family:Arial,Helvetica,sans-serif}a{color:#aaa;text-underline-offset:4px}a:hover{color:#fff}@media print{[data-video-bin]{display:none!important}}</style>
+</helmet>
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1600" height="900" hint-size="100%,100%" data-uneditable="">
+
+<section data-label="Cover" data-screen-label="01 Cover" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.1) 100%)"></div></div>
+  <div style="display:grid;grid-template-columns:1020px 340px;gap:80px;margin-top:54px;height:680px">
+    <div style="display: flex; flex-direction: column; align-items: flex-start; min-width: 0; position: relative">
+      <h1 style="font-size:97px;line-height:1.04;letter-spacing:-4px;font-weight:900;margin:40px 0 48px;text-wrap:pretty">Apache207<br><br>"SHOW 100"</h1>
+      <p style="font-size:22px;line-height:1.5;color:#d0d0d0;margin:auto 0 0">Deck by Leeroy - Flugmodus GmbH - For your eyes only</p></div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <sc-if value="{{ has.cover }}" hint-placeholder-val="{{ false }}"><div style="position:relative;width:100%;aspect-ratio:16/9;background:#090909;overflow:hidden"><video data-v="1" src="{{ vid.cover }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onClick="{{ pv.cover.toggle }}" onPlay="{{ pv.cover.onPlay }}" onPause="{{ pv.cover.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.cover.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.cover.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></div></sc-if>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">01</span>
+</section>
+
+<section data-label="Introduction" data-screen-label="02 Introduction" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:860px 500px;gap:80px;margin-top:54px;height:680px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0">
+      <h1 style="font-size:66px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:0 0 48px">Introduction:</h1>
+      <p style="font-size:29px;line-height:1.47;letter-spacing:-.2px;margin:0;text-wrap:pretty">Apache207 spielt am 12. Oktober 2026 sein Tourfinale in Hamburg und gleichzeitig auch seine 100. Arenashow. Ein großer Meilenstein nach einem langen Weg, sowohl für Apache, als auch für sein Team, seine Familie und allen um ihn herum. Dies gilt es nun für die Zukunft festzuhalten und einzufangen - vor allem jedoch das Gefühl, dabei zu sein und das ganze zu erleben, zu replizieren.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.intro.over }}" onDragLeave="{{ dz.intro.leave }}" onDropCapture="{{ dz.intro.drop }}" onMouseEnter="{{ dz.intro.enter }}" onMouseLeave="{{ dz.intro.exit }}" style="position:relative;width:{{ fr.intro.w }};height:{{ fr.intro.h }};aspect-ratio:{{ fr.intro.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.intro.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.intro.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.intro.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.intro }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.intro }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.intro.meta }}" onClick="{{ pv.intro.toggle }}" onPlay="{{ pv.intro.onPlay }}" onPause="{{ pv.intro.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.intro.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.intro.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ ytShow }}" hint-placeholder-val="{{ false }}"><iframe src="https://www.youtube-nocookie.com/embed/UaOdBXw9SY0?autoplay=1&amp;rel=0" title="DANKESCHÖN (Nie mehr gehen)" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen="{{ true }}" style="position:absolute;inset:0;width:100%;height:100%;border:0;z-index:4"></iframe></sc-if><sc-if value="{{ ytPlay }}" hint-placeholder-val="{{ false }}"><button onClick="{{ openYt }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if><sc-if value="{{ no.intro }}" hint-placeholder-val="{{ true }}"><image-slot id="intro" shape="rect" src="assets/original-1-poster.jpg" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">02</span>
+</section>
+
+<section data-label="Die Show" data-screen-label="03 Die Show" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:500px 860px;gap:80px;margin-top:54px;height:680px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0;order:2">
+      <h1 style="font-size:66px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:0 0 48px">Die Show:</h1>
+      <p style="font-size:29px;line-height:1.47;letter-spacing:-.2px;margin:0;text-wrap:pretty">Apaches Show geht ca. 2 Stunden und besteht aus verschiedenen Interaktiven Elementen und Positionen. Das Hauptaugenmerk liegt auf dem geteilten Flugzeug, welches das Center-Piece der Show darstellt. „Feder-Airlines“ nennt sich die Fluglinie, die Volkan auf der Bühne auch als Pilot verkörpert. Gleichzeitig schwebt er in anderen Momenten der Show auf einer Wolke, die sich durch die Crowd bewegt, anstatt an einem fixen Punkt zu sein.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.show.over }}" onDragLeave="{{ dz.show.leave }}" onDropCapture="{{ dz.show.drop }}" onMouseEnter="{{ dz.show.enter }}" onMouseLeave="{{ dz.show.exit }}" style="position:relative;width:{{ fr.show.w }};height:{{ fr.show.h }};aspect-ratio:{{ fr.show.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.show.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.show.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.show.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.show }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.show }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.show.meta }}" onClick="{{ pv.show.toggle }}" onPlay="{{ pv.show.onPlay }}" onPause="{{ pv.show.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.show.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.show.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ no.show }}" hint-placeholder-val="{{ true }}"><image-slot id="show" shape="rect" src="assets/original-2-url.jpg" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+      <div style="font-size:12px;line-height:1.5;color:#777;margin-top:17px">Thomas Brill / Kölnische Rundschau · Bildreferenz</div>
+      <a href="https://www.rundschau-online.de/kultur/feder-airlines-apache-207-landet-mit-echtem-flugzeug-in-koeln-3-1186430" target="_blank" rel="noopener noreferrer" style="display:inline-block;font-size:13px;margin-top:10px">Quelle öffnen</a>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">03</span>
+</section>
+
+<section data-label="Die Grundidee" data-screen-label="04 Die Grundidee" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:860px 500px;gap:80px;margin-top:54px;height:680px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0">
+      <h1 style="font-size:66px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:0 0 48px">Die Grundidee:</h1>
+      <p style="font-size:29px;line-height:1.47;letter-spacing:-.2px;margin:0;text-wrap:pretty">Um die Emotionalität des Weges von Volkan und seiner Crew festzuhalten, spielen wir mit dem Gedanken, die Show nicht einfach klassisch aufzuzeichnen und an einem Stück zu schneiden, sondern vielmehr, eine cinematische Experience &amp; emotionale Reise draus zu machen. Hierzu brechen wir ab und zu den Showfilm und bringen mithilfe von Voice-Over und ausgewählten Bildern (die ggf. auch noch unabhängig von der Show gedreht werden müssen) zusätzliche Sequenzen hinein, die den Zuschauer retroperspektiv einfangen.</p>
+      <p style="font-size:29px;line-height:1.47;letter-spacing:-.2px;margin:42px 0 0;text-wrap:pretty">Diese Sequenzen sind variabel und können mehr, oder auch sehr dezent eingesetzt werden.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.idee.over }}" onDragLeave="{{ dz.idee.leave }}" onDropCapture="{{ dz.idee.drop }}" onMouseEnter="{{ dz.idee.enter }}" onMouseLeave="{{ dz.idee.exit }}" style="position:relative;width:{{ fr.idee.w }};height:{{ fr.idee.h }};aspect-ratio:{{ fr.idee.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.idee.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.idee.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.idee.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.idee }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.idee }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.idee.meta }}" onClick="{{ pv.idee.toggle }}" onPlay="{{ pv.idee.onPlay }}" onPause="{{ pv.idee.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.idee.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.idee.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ no.idee }}" hint-placeholder-val="{{ true }}"><image-slot id="idee" shape="rect" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">04</span>
+</section>
+
+<section data-label="Zeitstrahl Grafik" data-screen-label="05 Zeitstrahl Grafik" data-speaker-notes="Ablauf des Showfilms: Show-Teile mit eingeschobenen Sequenzen." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <h1 style="font-size:62px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:25px 0 0">Zeitstrahl der Show:</h1>
+  <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr) minmax(0,1fr) minmax(0,3fr) minmax(0,1fr) minmax(0,3fr) minmax(0,1fr);grid-template-rows:230px 12px auto;column-gap:6px;margin-top:150px">
+    <div style="grid-row:1;grid-column:1;align-self:end;justify-self:start;display:flex;flex-direction:column;align-items:flex-start;text-align:left;width:max-content;max-width:240px"><span style="font-size:30px;font-weight:900;letter-spacing:-.5px;line-height:1.1">Intro</span><span style="font-size:20px;line-height:1.35;color:#a4a4a4;margin-top:8px">Bilder von früher, Voice-Over von Volkan</span><span style="width:1px;height:40px;background:#777;margin-top:18px"></span></div>
+    <div style="grid-row:1;grid-column:3;align-self:end;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;width:max-content;max-width:240px"><span style="font-size:30px;font-weight:900;letter-spacing:-.5px;line-height:1.1">Break</span><span style="font-size:20px;line-height:1.35;color:#a4a4a4;margin-top:8px">Proben-Footage, O-Töne, Behind the Scenes</span><span style="width:1px;height:40px;background:#777;margin-top:18px"></span></div>
+    <div style="grid-row:1;grid-column:5;align-self:end;justify-self:center;display:flex;flex-direction:column;align-items:center;text-align:center;width:max-content;max-width:240px"><span style="font-size:30px;font-weight:900;letter-spacing:-.5px;line-height:1.1">Break</span><span style="font-size:20px;line-height:1.35;color:#a4a4a4;margin-top:8px">Flashback in die Vergangenheit</span><span style="width:1px;height:40px;background:#777;margin-top:18px"></span></div>
+    <div style="grid-row:1;grid-column:7;align-self:end;justify-self:end;display:flex;flex-direction:column;align-items:flex-end;text-align:right;width:max-content;max-width:240px"><span style="font-size:30px;font-weight:900;letter-spacing:-.5px;line-height:1.1">Outro</span><span style="font-size:20px;line-height:1.35;color:#a4a4a4;margin-top:8px">Blick nach vorne</span><span style="width:1px;height:40px;background:#777;margin-top:18px"></span></div>
+    <div style="grid-row:2;grid-column:1;height:12px;border:1px solid #fff;box-sizing:border-box"></div><div style="grid-row:2;grid-column:2;height:12px;background:#fff"></div><div style="grid-row:2;grid-column:3;height:12px;border:1px solid #fff;box-sizing:border-box"></div><div style="grid-row:2;grid-column:4;height:12px;background:#fff"></div><div style="grid-row:2;grid-column:5;height:12px;border:1px solid #fff;box-sizing:border-box"></div><div style="grid-row:2;grid-column:6;height:12px;background:#fff"></div><div style="grid-row:2;grid-column:7;height:12px;border:1px solid #fff;box-sizing:border-box"></div>
+    <div style="grid-row:3;grid-column:2;justify-self:center;padding-top:22px;font-size:30px;font-weight:900;letter-spacing:-.5px">1/3 Show</div><div style="grid-row:3;grid-column:4;justify-self:center;padding-top:22px;font-size:30px;font-weight:900;letter-spacing:-.5px">1/3 Show</div><div style="grid-row:3;grid-column:6;justify-self:center;padding-top:22px;font-size:30px;font-weight:900;letter-spacing:-.5px">1/3 Show</div>
+  </div>
+  <div style="position:absolute;left:80px;bottom:40px;display:flex;gap:32px;font-size:16px;color:#777;letter-spacing:1px"><span style="display:flex;align-items:center;gap:10px"><span style="width:28px;height:10px;background:#fff"></span>Show</span><span style="display:flex;align-items:center;gap:10px"><span style="width:28px;height:10px;border:1px solid #fff;box-sizing:border-box"></span>Eingeschobene Sequenz</span></div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">05</span>
+</section>
+
+<section data-label="Zeitstrahl Text" data-screen-label="06 Zeitstrahl" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <h1 style="font-size:62px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:25px 0 42px">Zeitstrahl der Show:</h1>
+  <div style="display:grid;grid-template-columns:1070px 300px;gap:70px">
+    <div style="border-left:1px solid #555;padding-left:28px;margin-left:6px;display:flex;flex-direction:column;gap:22px">
+      <div style="display:grid;grid-template-columns:9px 1fr;gap:24px;margin-left:-33px"><span style="width:9px;height:9px;background:#fff;border-radius:50%;margin-top:11px"></span><p style="font-size:25px;line-height:1.34;letter-spacing:-.1px;margin:0">Intro: Ein emotionales Intro zu Beginn des Showvideos hyped uns auf das, was noch kommt - zeigt aber auch, was es gebraucht hat um hier her zu kommen. Bilder von früher, Videos aus der Hood wo auf der Straße vor einer Hand voll Leuten gerappt wurde und die ersten Musikvideos - heute stehen wir beim Soundcheck in einer leeren Arena. Ein Voice Over von Volkan begleitet und erklärt seine Gefühlslage, ganz transparent und ehrlich. Er freut sich auf die 100. Show und das, was ihm das alles gebracht hat.</p></div>
+      <div style="display:grid;grid-template-columns:9px 1fr;gap:24px;margin-left:-33px"><span style="width:9px;height:9px;background:#fff;border-radius:50%;margin-top:11px"></span><p style="font-size:25px;line-height:1.34;letter-spacing:-.1px;margin:0">Dann -&gt; Show. Erstmal ein längerer Part, mehrere Songs.<br>Ab einem gewissen Punkt kommt nochmal ein Break - wieder eine kleine Videosequenz, die vielleicht altes Material oder Footage aus den Proben zur Tour zeigt, O-Töne aus diesem Zeitraum. Wir bringen dadurch einen Behind the Scenes Character und gewisse Nahbarkeit mit in unseren Tourfilm.</p></div>
+      <div style="display:grid;grid-template-columns:9px 1fr;gap:24px;margin-left:-33px"><span style="width:9px;height:9px;background:#fff;border-radius:50%;margin-top:11px"></span><p style="font-size:25px;line-height:1.34;letter-spacing:-.1px;margin:0">So bauen wir uns durch den Film kleine Breaks ein, die mit einem langen Echo des Songs davor introduced werden und einem Flashbackartige Eindrücke geben. Ein Intro baut die Spannung auf, ein weiterer Break gibt uns Eindrücke hinter die Kulissen, ein anderer Break Wiederrum holt uns wieder zurück in die Vergangenheit - bis wir am Schluss unseres Films angekommen sind und ein Outro einbinden, welches den Blick nach vorne zeigt und auf das Hunger macht, was in der Zukunft noch kommt. Die nächsten 100 Shows? Musik? Wir wissen es noch nicht.</p></div>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.timeline.over }}" onDragLeave="{{ dz.timeline.leave }}" onDropCapture="{{ dz.timeline.drop }}" onMouseEnter="{{ dz.timeline.enter }}" onMouseLeave="{{ dz.timeline.exit }}" style="position:relative;width:{{ fr.timeline.w }};height:{{ fr.timeline.h }};aspect-ratio:{{ fr.timeline.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.timeline.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.timeline.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.timeline.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.timeline }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.timeline }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.timeline.meta }}" onClick="{{ pv.timeline.toggle }}" onPlay="{{ pv.timeline.onPlay }}" onPause="{{ pv.timeline.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.timeline.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.timeline.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ no.timeline }}" hint-placeholder-val="{{ true }}"><image-slot id="timeline" shape="rect" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">06</span>
+</section>
+
+<section data-label="How we film" data-screen-label="07 How we film the Show" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:500px 860px;gap:80px;margin-top:54px;height:680px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0;order:2">
+      <h1 style="font-size:66px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:0 0 48px">How we film the Show:</h1>
+      <p style="font-size:29px;line-height:1.47;letter-spacing:-.2px;margin:0;text-wrap:pretty">Die Show selbst wird natürlich mit einem hochcinematischen Ansatz verfolgt, wobei die Detailplanung noch aussteht. Verschiedene Kamerapositionen bringen uns die klassisch notwendigen Positionen, wobei wir natürlich gerne für die letzte Show mehr Specials einbinden wollen würden. Solche könnten sein:</p>
+      <ul style="font-size:28px;line-height:1.42;padding-left:28px;margin:30px 0 0;display:flex;flex-direction:column;gap:15px">
+        <li style="padding-left:8px">High SlowMotion Sequenzen, die länger stehen (300fps+)</li>
+        <li style="padding-left:8px">Rigged Cameras (zB. Am Mic, an der Wolke oder an Riggbühnen / Motoren)</li>
+        <li style="padding-left:8px">POV Shots (Meta-Glasses für Volkan, Bandmitglieder &amp; co)</li>
+      </ul>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.filming.over }}" onDragLeave="{{ dz.filming.leave }}" onDropCapture="{{ dz.filming.drop }}" onMouseEnter="{{ dz.filming.enter }}" onMouseLeave="{{ dz.filming.exit }}" style="position:relative;width:{{ fr.filming.w }};height:{{ fr.filming.h }};aspect-ratio:{{ fr.filming.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.filming.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.filming.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.filming.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.filming }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.filming }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.filming.meta }}" onClick="{{ pv.filming.toggle }}" onPlay="{{ pv.filming.onPlay }}" onPause="{{ pv.filming.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.filming.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.filming.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ no.filming }}" hint-placeholder-val="{{ true }}"><image-slot id="filming" shape="rect" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">07</span>
+</section>
+
+<section data-label="Different Approaches" data-screen-label="08 Different Approaches in Songs" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:860px 500px;gap:80px;margin-top:54px;height:680px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0">
+      <h1 style="font-size:58px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:0 0 48px">Different Approaches in Songs:</h1>
+      <p style="font-size:28px;line-height:1.42;letter-spacing:-.2px;margin:0;text-wrap:pretty">Um die Abwechslung noch weiter zu steigern, würden wir vor allem im Schnitt später bei ausgewählten Songs fixe Konzepte verfolgen. Beispielsweise besteht ein Song zum Großteil nur aus Camcorder Aufnahmen, ein anderer könnte komplett in Schwarz-Weiß abgedeckt sein bis auf bestimmte Elemente, die ausmaskiert werden. Ein anderer Song konzentriert sich vielleicht fast auf ausschließlich Crowd und zeigt den kompletten Song, wie er word for word von anderen Menschen gesungen wird - wie ein kleines Fan-Musikvideo. Auf der Wolke können wir durch VFX / AI weitere Wolken in der Arena einbinden, um ein bigger Picture zu ermöglichen.<br>Dies gilt es, fix zu Skripten und bestimmte Highlightsongs + Moods auszuwählen.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.songs.over }}" onDragLeave="{{ dz.songs.leave }}" onDropCapture="{{ dz.songs.drop }}" onMouseEnter="{{ dz.songs.enter }}" onMouseLeave="{{ dz.songs.exit }}" style="position:relative;width:{{ fr.songs.w }};height:{{ fr.songs.h }};aspect-ratio:{{ fr.songs.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.songs.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.songs.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.songs.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.songs }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.songs }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.songs.meta }}" onClick="{{ pv.songs.toggle }}" onPlay="{{ pv.songs.onPlay }}" onPause="{{ pv.songs.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.songs.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.songs.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ no.songs }}" hint-placeholder-val="{{ true }}"><image-slot id="songs" shape="rect" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">08</span>
+</section>
+
+<section data-label="Disclaimer" data-screen-label="09 Disclaimer" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:500px 860px;gap:80px;margin-top:54px;height:680px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0;order:2">
+      <h1 style="font-size:66px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:0 0 48px">Disclaimer:</h1>
+      <p style="font-size:29px;line-height:1.47;letter-spacing:-.2px;margin:0;text-wrap:pretty">Natürlich ist es auch möglich, diesen cinematischen Monolog-Ansatz zu verwerfen und das Konzert von Anfang bis Ende (wie ein klassisches Live-Set halt) in einem durch zu zeigen, ohne dabei die Zuschauer rauszuholen. Die Idee oben entstand einzig und allein aus dem Gedanken, Volkans bisheriger Showkarriere noch mehr Substanz und Einblick in die Emotionalität zu geben.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;min-width:0">
+      <div onDragOverCapture="{{ dz.disclaimer.over }}" onDragLeave="{{ dz.disclaimer.leave }}" onDropCapture="{{ dz.disclaimer.drop }}" onMouseEnter="{{ dz.disclaimer.enter }}" onMouseLeave="{{ dz.disclaimer.exit }}" style="position:relative;width:{{ fr.disclaimer.w }};height:{{ fr.disclaimer.h }};aspect-ratio:{{ fr.disclaimer.ar }};max-width:100%;align-self:center;background:#090909;overflow:hidden">
+        <sc-if value="{{ dz.disclaimer.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+        <sc-if value="{{ dz.disclaimer.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.disclaimer.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+        <sc-if value="{{ has.disclaimer }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.disclaimer }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.disclaimer.meta }}" onClick="{{ pv.disclaimer.toggle }}" onPlay="{{ pv.disclaimer.onPlay }}" onPause="{{ pv.disclaimer.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.disclaimer.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.disclaimer.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+        <sc-if value="{{ no.disclaimer }}" hint-placeholder-val="{{ true }}"><image-slot id="disclaimer" shape="rect" placeholder="Video / Bild" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+      </div>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">09</span>
+</section>
+
+<section data-label="Moodvideos" data-screen-label="10 Moodvideos" data-speaker-notes="Zusatzfolie für Moodvideos." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <h1 style="font-size:88px;line-height:1.05;letter-spacing:-2.5px;font-weight:900;margin:20px 0 0">Moodvideos</h1>
+  <div style="display:flex;flex-wrap:wrap;gap:32px;margin-top:48px">
+    <div onDragOverCapture="{{ dz.mood1.over }}" onDragLeave="{{ dz.mood1.leave }}" onDropCapture="{{ dz.mood1.drop }}" onMouseEnter="{{ dz.mood1.enter }}" onMouseLeave="{{ dz.mood1.exit }}" style="position:relative;height:280px;width:auto;flex:none;aspect-ratio:{{ fr.mood1.mar }};background:#090909;overflow:hidden">
+      <sc-if value="{{ dz.mood1.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+      <sc-if value="{{ dz.mood1.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.mood1.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+      <sc-if value="{{ has.mood1 }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.mood1 }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.mood1.meta }}" onClick="{{ pv.mood1.toggle }}" onPlay="{{ pv.mood1.onPlay }}" onPause="{{ pv.mood1.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.mood1.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.mood1.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+      <sc-if value="{{ no.mood1 }}" hint-placeholder-val="{{ true }}"><image-slot id="mood1" shape="rect" placeholder="Moodvideo 1" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+    </div>
+    <div onDragOverCapture="{{ dz.mood2.over }}" onDragLeave="{{ dz.mood2.leave }}" onDropCapture="{{ dz.mood2.drop }}" onMouseEnter="{{ dz.mood2.enter }}" onMouseLeave="{{ dz.mood2.exit }}" style="position:relative;height:280px;width:auto;flex:none;aspect-ratio:{{ fr.mood2.mar }};background:#090909;overflow:hidden">
+      <sc-if value="{{ dz.mood2.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+      <sc-if value="{{ dz.mood2.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.mood2.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+      <sc-if value="{{ has.mood2 }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.mood2 }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.mood2.meta }}" onClick="{{ pv.mood2.toggle }}" onPlay="{{ pv.mood2.onPlay }}" onPause="{{ pv.mood2.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.mood2.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.mood2.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+      <sc-if value="{{ no.mood2 }}" hint-placeholder-val="{{ true }}"><image-slot id="mood2" shape="rect" placeholder="Moodvideo 2" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+    </div>
+    <div onDragOverCapture="{{ dz.mood3.over }}" onDragLeave="{{ dz.mood3.leave }}" onDropCapture="{{ dz.mood3.drop }}" onMouseEnter="{{ dz.mood3.enter }}" onMouseLeave="{{ dz.mood3.exit }}" style="position:relative;height:280px;width:auto;flex:none;aspect-ratio:{{ fr.mood3.mar }};background:#090909;overflow:hidden">
+      <sc-if value="{{ dz.mood3.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+      <sc-if value="{{ dz.mood3.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.mood3.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+      <sc-if value="{{ has.mood3 }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.mood3 }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.mood3.meta }}" onClick="{{ pv.mood3.toggle }}" onPlay="{{ pv.mood3.onPlay }}" onPause="{{ pv.mood3.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.mood3.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.mood3.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+      <sc-if value="{{ no.mood3 }}" hint-placeholder-val="{{ true }}"><image-slot id="mood3" shape="rect" placeholder="Moodvideo 3" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+    </div>
+    <div onDragOverCapture="{{ dz.mood4.over }}" onDragLeave="{{ dz.mood4.leave }}" onDropCapture="{{ dz.mood4.drop }}" onMouseEnter="{{ dz.mood4.enter }}" onMouseLeave="{{ dz.mood4.exit }}" style="position:relative;height:280px;width:auto;flex:none;aspect-ratio:{{ fr.mood4.mar }};background:#090909;overflow:hidden">
+      <sc-if value="{{ dz.mood4.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+      <sc-if value="{{ dz.mood4.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.mood4.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+      <sc-if value="{{ has.mood4 }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.mood4 }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.mood4.meta }}" onClick="{{ pv.mood4.toggle }}" onPlay="{{ pv.mood4.onPlay }}" onPause="{{ pv.mood4.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.mood4.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.mood4.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+      <sc-if value="{{ no.mood4 }}" hint-placeholder-val="{{ true }}"><image-slot id="mood4" shape="rect" placeholder="Moodvideo 4" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+    </div>
+    <div onDragOverCapture="{{ dz.mood5.over }}" onDragLeave="{{ dz.mood5.leave }}" onDropCapture="{{ dz.mood5.drop }}" onMouseEnter="{{ dz.mood5.enter }}" onMouseLeave="{{ dz.mood5.exit }}" style="position:relative;height:280px;width:auto;flex:none;aspect-ratio:{{ fr.mood5.mar }};background:#090909;overflow:hidden">
+      <sc-if value="{{ dz.mood5.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+      <sc-if value="{{ dz.mood5.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.mood5.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+      <sc-if value="{{ has.mood5 }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.mood5 }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.mood5.meta }}" onClick="{{ pv.mood5.toggle }}" onPlay="{{ pv.mood5.onPlay }}" onPause="{{ pv.mood5.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.mood5.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.mood5.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+      <sc-if value="{{ no.mood5 }}" hint-placeholder-val="{{ true }}"><image-slot id="mood5" shape="rect" placeholder="Moodvideo 5" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+    </div>
+    <div onDragOverCapture="{{ dz.mood6.over }}" onDragLeave="{{ dz.mood6.leave }}" onDropCapture="{{ dz.mood6.drop }}" onMouseEnter="{{ dz.mood6.enter }}" onMouseLeave="{{ dz.mood6.exit }}" style="position:relative;height:280px;width:auto;flex:none;aspect-ratio:{{ fr.mood6.mar }};background:#090909;overflow:hidden">
+      <sc-if value="{{ dz.mood6.hot }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;inset:0;z-index:5;border:2px solid #fff;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;letter-spacing:2px;pointer-events:none">VIDEO HIER ABLEGEN</div></sc-if>
+      <sc-if value="{{ dz.mood6.canRemove }}" hint-placeholder-val="{{ false }}"><button onClick="{{ dz.mood6.remove }}" style="position:absolute;top:10px;right:10px;z-index:6;padding:8px 12px;background:rgba(0,0,0,.85);color:#fff;border:1px solid #777;font:13px Arial,Helvetica,sans-serif;cursor:pointer">Video entfernen</button></sc-if>
+      <sc-if value="{{ has.mood6 }}" hint-placeholder-val="{{ false }}"><video data-v="1" src="{{ vid.mood6 }}" playsInline="{{ true }}" loop="{{ true }}" preload="metadata" onLoadedMetadata="{{ pv.mood6.meta }}" onClick="{{ pv.mood6.toggle }}" onPlay="{{ pv.mood6.onPlay }}" onPause="{{ pv.mood6.onPause }}" style="width:100%;height:100%;object-fit:cover;display:block;cursor:pointer"></video><sc-if value="{{ pv.mood6.showPlay }}" hint-placeholder-val="{{ true }}"><button onClick="{{ pv.mood6.toggle }}" aria-label="Video abspielen" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:4;width:84px;height:84px;border-radius:50%;border:2px solid #fff;background:rgba(0,0,0,.45);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0 0 0 6px;box-sizing:border-box"><span style="width:0;height:0;border-style:solid;border-width:14px 0 14px 24px;border-color:transparent transparent transparent #fff"></span></button></sc-if></sc-if>
+      <sc-if value="{{ no.mood6 }}" hint-placeholder-val="{{ true }}"><image-slot id="mood6" shape="rect" placeholder="Moodvideo 6" style="filter:{{ imgFilter }}"></image-slot></sc-if>
+    </div>
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">10</span>
+</section>
+
+<section data-label="Danke" data-screen-label="11 Danke" data-speaker-notes="Originaltext aus „Show 100.pages“." style="background:#000;color:#fff;padding:64px 80px;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;overflow:hidden;isolation:isolate">
+  <div style="position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden"><img src="./25-236253-251209-ralph-pache-gigblog-muguqs61-m5zh.jpg" alt="" style="position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;display:block;filter:blur(10px)"><div style="position:absolute;inset:0;background:rgba(0,0,0,.72)"></div></div>
+  <div style="display:grid;grid-template-columns:860px 500px;gap:80px;margin-top:160px;height:500px">
+    <div style="display:flex;flex-direction:column;align-items:flex-start;min-width:0">
+      <h1 style="font-size:160px;line-height:1;letter-spacing:-7px;font-weight:900;margin:0 0 48px">Danke.</h1>
+      <p style="font-size:25px;line-height:1.47;margin:0">Deck by Leeroy - For your eyes only</p>
+    </div>
+    
+  </div>
+  <span style="position:absolute;right:80px;bottom:40px;font-size:14px;color:#777;letter-spacing:2px">11</span>
+</section>
+
+</x-import>
+<sc-if value="{{ binVisible }}" hint-placeholder-val="{{ false }}">
+<div data-video-bin="1" style="position:fixed;top:16px;right:16px;z-index:2147483000;font-family:Arial,Helvetica,sans-serif;color:#fff;transition:opacity .15s;opacity:{{ binOpacity }};pointer-events:{{ binPE }}">
+  <sc-if value="{{ binClosed }}" hint-placeholder-val="{{ true }}"><button onClick="{{ toggleBin }}" style="padding:10px 16px;background:#141414;color:#fff;border:1px solid #555;font:13px Arial,Helvetica,sans-serif;letter-spacing:1px;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.5)">VIDEOS EINFÜGEN</button></sc-if>
+  <sc-if value="{{ binOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="width:280px;max-height:calc(100vh - 32px);overflow:auto;background:#141414;border:1px solid #444;padding:16px;box-sizing:border-box;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 40px rgba(0,0,0,.6)">
+      <div style="display:flex;justify-content:space-between;align-items:center"><strong style="font-size:13px;letter-spacing:2px">VIDEOS</strong><button onClick="{{ toggleBin }}" style="background:none;border:0;color:#bbb;font-size:20px;cursor:pointer;padding:0 4px">×</button></div>
+      <p style="font-size:12px;color:#999;margin:0 0 4px;line-height:1.5">Ein Video auf einen Medienplatz der aktuellen Folie ziehen. Zum Entfernen über das Video fahren.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px"><sc-for list="{{ library }}" as="v" hint-placeholder-count="8">
+        <div draggable="true" onDragStart="{{ v.onDragStart }}" onDragEnd="{{ dragEnd }}" style="display:flex;flex-direction:column;gap:5px;cursor:grab;padding:5px;border:1px solid #2a2a2a;background:#0c0c0c;min-width:0">
+          <video src="{{ v.thumb }}" muted="{{ true }}" preload="metadata" playsInline="{{ true }}" onLoadedMetadata="{{ v.meta }}" style="width:100%;aspect-ratio:16/9;object-fit:contain;background:#000;display:block;pointer-events:none"></video>
+          <div style="display:flex;justify-content:space-between;gap:6px;font-size:12px"><span>{{ v.label }}</span><span style="color:#888">{{ v.ratio }}</span></div>
+          <span style="font-size:11px;color:#888">{{ v.usedOn }}</span>
+        </div>
+      </sc-for></div>
+    </div>
+  </sc-if>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;grayscale&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Darstellung&quot;},&quot;autoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Darstellung&quot;}}">
+const FILES = {
+  'Video 1': 'assets/videos/video-1.mp4',
+  'Video 2': 'assets/videos/video-2.mp4',
+  'Video 3': 'assets/videos/video-3.mp4',
+  'Video 4': 'assets/videos/video-4.mp4',
+  'Video 5': 'assets/videos/video-5.mp4',
+  'Video 6': 'assets/videos/video-6.mp4',
+  'WhatsApp 25.09.': 'assets/videos/whatsapp-2026-09-25.mp4',
+  'Video 7': 'assets/videos/89899889.mp4',
+  'Video 8': 'assets/videos/05_DWCDBm8GXrn.mp4',
+  'Luciano': 'assets/videos/luciano.mp4'
+};
+const SLOTS = { cover: '01', intro: '02', show: '03', idee: '04', timeline: '06', filming: '07', songs: '08', disclaimer: '09', mood1: '10', mood2: '10', mood3: '10', mood4: '10', mood5: '10', mood6: '10', danke: '11' };
+const DEFAULTS = { mood1: 'Video 1', mood2: 'Video 2', mood3: 'Video 3', mood4: 'Video 4', mood5: 'Video 6', mood6: 'Luciano' };
+const STATE_FILE = '.video-slots.state.json';
+const MIME = 'application/x-deck-video';
+
+class Component extends DCLogic {
+  state = { map: {}, hot: null, hover: null, open: (() => { try { return localStorage.getItem('apache207-videobin-open') === '1'; } catch (e) { return false; } })(), editable: false };
+  componentDidMount() {
+    fetch(STATE_FILE).then(r => r.ok ? r.json() : null).then(j => {
+      if (j && typeof j === 'object') this.setState(s => ({ map: { ...j, ...s.map } }));
+    }).catch(() => {});
+    const check = () => { const e = !!(window.omelette && window.omelette.writeFile); if (e !== this.state.editable) this.setState({ editable: e }); };
+    check(); this._iv = setInterval(check, 1000);
+    const readActive = () => {
+      const sec = document.querySelector('section[data-deck-active]');
+      const a = sec ? (sec.getAttribute('data-screen-label') || '').slice(0, 2) : '01';
+      if (a !== this.state.active) {
+        document.querySelectorAll('video[data-v]').forEach(v => { if (!v.closest('section[data-deck-active]')) v.pause(); });
+        this.setState({ active: a });
+      }
+    };
+    readActive();
+    this._mo = new MutationObserver(readActive);
+    this._mo.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-deck-active'] });
+    this.syncVideos();
+  }
+  componentWillUnmount() { clearInterval(this._iv); this._mo && this._mo.disconnect(); }
+  componentDidUpdate() { this.syncVideos(); }
+  syncVideos() {
+    const auto = this.props.autoplay ?? false;
+    document.querySelectorAll('video[data-v]').forEach(v => {
+      v.muted = auto;
+      if (auto && v.paused) v.play().catch(() => {});
+    });
+  }
+  assign(k, label) {
+    this.setState(s => ({ map: { ...s.map, [k]: label }, hot: null, dragging: false }), () => {
+      const w = window.omelette && window.omelette.writeFile;
+      if (w) Promise.resolve(w(STATE_FILE, JSON.stringify(this.state.map))).catch(() => {});
+    });
+  }
+  pick(k) { return k in this.state.map ? this.state.map[k] : (DEFAULTS[k] ?? null); }
+  renderVals() {
+    const vid = {}, has = {}, no = {}, dz = {}, pv = {};
+    const playing = this.state.playing || {};
+    const ratio = this.state.ratio || {};
+    const fr = {};
+    const ed = this.state.editable;
+    for (const k of Object.keys(SLOTS)) {
+      const src = FILES[this.pick(k)];
+      vid[k] = src && this.state.active === SLOTS[k] ? src : ''; has[k] = !!src; no[k] = !src;
+      const r = src ? ratio[k] : null;
+      const fb = { 'assets/videos/video-2.mp4': 4/3, 'assets/videos/video-3.mp4': 4/3, 'assets/videos/video-6.mp4': 4/3 }[src];
+      const mr = r || fb || 16/9;
+      fr[k] = !r ? { w: '100%', h: 'auto', ar: '16/9' } : r < 1 ? { w: 'auto', h: '560px', ar: String(r) } : { w: '100%', h: 'auto', ar: String(r) };
+      fr[k].mar = String(mr);
+      const findV = e => e.currentTarget.tagName === 'VIDEO' ? e.currentTarget : e.currentTarget.parentElement.querySelector('video');
+      pv[k] = {
+        showPlay: !playing[k],
+        toggle: e => { e.stopPropagation(); const v = findV(e); if (!v) return; if (v.paused) v.play().catch(() => {}); else v.pause(); },
+        onPlay: () => this.setState(s => ({ playing: { ...(s.playing || {}), [k]: true } })),
+        onPause: () => this.setState(s => ({ playing: { ...(s.playing || {}), [k]: false } })),
+        meta: e => { const v = e.currentTarget; if (!v.videoWidth) return; const r = v.videoWidth / v.videoHeight; if ((this.state.ratio || {})[k] !== r) this.setState(s => ({ ratio: { ...(s.ratio || {}), [k]: r } })); }
+      };
+      dz[k] = {
+        hot: this.state.hot === k,
+        canRemove: ed && !!src && this.state.hover === k && !this.state.hot,
+        over: e => { if (!Array.from(e.dataTransfer.types).includes(MIME)) return; e.preventDefault(); e.stopPropagation(); e.dataTransfer.dropEffect = 'copy'; if (this.state.hot !== k) this.setState({ hot: k }); },
+        leave: e => { if (e.currentTarget.contains(e.relatedTarget)) return; if (this.state.hot === k) this.setState({ hot: null }); },
+        drop: e => { const v = e.dataTransfer.getData(MIME); if (!v) return; e.preventDefault(); e.stopPropagation(); this.assign(k, v); },
+        enter: () => this.setState({ hover: k }),
+        exit: () => { if (this.state.hover === k) this.setState({ hover: null }); },
+        remove: e => { e.stopPropagation(); this.assign(k, null); }
+      };
+    }
+    const library = Object.keys(FILES).map(label => {
+      const used = [...new Set(Object.keys(SLOTS).filter(k => this.pick(k) === label).map(k => SLOTS[k]))];
+      return {
+        label, thumb: FILES[label] + '#t=1',
+        usedOn: used.length ? 'Folie ' + used.join(', ') : 'Nicht verwendet',
+        ratio: this.state.libRatio?.[label] || '',
+        meta: e => { const v = e.currentTarget; if (!v.videoWidth) return; const g = (x, y) => y ? g(y, x % y) : x; const d = g(v.videoWidth, v.videoHeight); let rs = (v.videoWidth / d) + ':' + (v.videoHeight / d); const r = v.videoWidth / v.videoHeight; const known = [[16/9,'16:9'],[9/16,'9:16'],[4/3,'4:3'],[3/4,'3:4'],[1,'1:1'],[4/5,'4:5'],[21/9,'21:9']]; const hit = known.find(([q]) => Math.abs(q - r) < 0.03); if (hit) rs = hit[1]; if (this.state.libRatio?.[label] !== rs) this.setState(s => ({ libRatio: { ...(s.libRatio || {}), [label]: rs } })); },
+        onDragStart: e => { e.dataTransfer.setData(MIME, label); e.dataTransfer.setData('text/plain', label); e.dataTransfer.effectAllowed = 'copy'; setTimeout(() => this.setState({ dragging: true }), 0); }
+      };
+    });
+    return {
+      vid, has, no, dz, pv, fr, library,
+      ytShow: !has.intro && !!this.state.yt, ytPlay: !has.intro && !this.state.yt,
+      openYt: e => { e.stopPropagation(); this.setState({ yt: true }); },
+      binVisible: ed, binOpen: this.state.open, binClosed: !this.state.open,
+      toggleBin: () => this.setState(s => { const open = !s.open; try { localStorage.setItem('apache207-videobin-open', open ? '1' : '0'); } catch (e) {} return { open }; }),
+      dragEnd: () => this.setState({ hot: null, dragging: false }),
+      binOpacity: this.state.dragging ? 0.12 : 1,
+      binPE: this.state.dragging ? 'none' : 'auto',
+      imgFilter: (this.props.grayscale ?? true) ? 'grayscale(1)' : 'none'
+    };
+  }
+}
+</script>
+</body>
+</html>
